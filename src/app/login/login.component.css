@@ -1,0 +1,105 @@
+/* Overall page styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font for a cleaner look */
+    background-color: #f0f4f8; /* Soft background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header styling */
+.login-header,
+.reg-header {
+    font-weight: 600;
+    font-size: 24px;
+    color: #2c3e50; /* Deep, elegant color */
+    margin-bottom: 20px;
+}
+
+/* Container for both login and registration forms */
+.login-form-cont,
+.reg-form-cont {
+    background: linear-gradient(135deg, #f9fafb, #dfe4ea); /* Subtle background gradient */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Soft shadow for a modern look */
+}
+
+/* Card styling for login and registration forms */
+.loginCard,
+.reg-card {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Softer, larger shadow */
+    border-radius: 15px; /* Softer corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.loginCard:hover,
+.reg-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+/* Button styling */
+.login-btn,
+.reg-btn {
+    background-image: linear-gradient(to right, #4e54c8, #8f94fb); /* Matching modern gradient */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* Rounded buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More realistic shadow */
+    margin-top: 20px;
+}
+
+.login-btn:hover,
+.reg-btn:hover {
+    background-image: linear-gradient(to right, #3b3fb1, #7a81e3);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+/* Sign-up button (can be reused for any secondary action) */
+.sg-up-btn {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sg-up-btn:hover {
+    background-color: #ff4757;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* Similar hover effect as other buttons */
+}
+
+/* Input field styling */
+.small-input input {
+    font-size: 14px; /* Slightly larger for readability */
+    color: #2c3e50; /* Modern dark tone */
+    border: 1px solid #dcdcdc; /* Softer border */
+    padding: 12px;
+    border-radius: 10px; /* Smooth rounded corners */
+    width: 100%; /* Full width for better usability */
+    transition: border-color 0.3s ease;
+}
+
+.small-input input:focus {
+    border-color: #6a11cb; /* Vibrant color on focus */
+    outline: none; /* Remove default outline */
+}

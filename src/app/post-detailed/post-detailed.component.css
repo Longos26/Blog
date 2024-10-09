@@ -1,0 +1,39 @@
+.whole-post {
+    overflow-y: scroll;
+}
+
+.blog-card {
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    /* background-color: #9c1d1ba0; */
+    color: red;
+}
+
+.delete-btn:hover {
+    background-color: #9c1d1b;
+    color: white;
+}
+
+.author {
+    font-size: 12px;
+    color: #b7adad;
+    margin-left: 15px;
+    padding-top: 10px; /* Add some padding inside the author's section, if needed */
+}
+
+.you {
+    color: #d146de;
+}
+
+:host ::ng-deep .comment-body {
+    color: black !important;
+    font-size: 25px;
+}

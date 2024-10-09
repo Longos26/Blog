@@ -1,0 +1,14 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<mat-toolbar class="navbar bg-white">
+    <span class="px-2 logo">Yur Blogger</span>
+
+    <div class="nav-items">
+        <a class="nav-link blogs-link" mat-button routerLink="/blogs">Blogs</a>
+        <a *ngIf="!(isLoggedIn$ | async)" class="nav-link login-link" mat-button routerLink="/login">Login</a>
+        <a *ngIf="isLoggedIn$ | async" class="nav-link logout-link" mat-button routerLink="/login" (click)="onLogout()">Logout</a>
+    </div>    
+</mat-toolbar>

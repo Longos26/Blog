@@ -1,0 +1,10 @@
+.home-cont {
+    /* border: blue 1px solid; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;;
+}
+

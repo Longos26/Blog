@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="comments-container">
+                <div class="comment" *ngFor="let comment of comments">
+                    <mat-card class="my-2 comment-card">
+                        <mat-card-header>
+                            <small class="comment-header">
+                                <span class="commentor">{{comment.user_username}}</span>
+                                <span class="you" *ngIf="comment.user_id === currentUserId">(You)</span>
+                                <span class="author" *ngIf="comment.user_id === comment.author_posts_user_id">(Author)</span>
+                            </small>
+                        </mat-card-header>
+
+                        <mat-card-content class="comment-body" [innerHTML]="comment.comment_body"></mat-card-content>
+
+                        <mat-card-footer class="d-flex justify-content-end">
+                            <button mat-button (click)="deleteComment(comment.comment_id)" class="delC-btn"
+                                *ngIf="comment.user_id === currentUserId || comment.author_posts_user_id === currentUserId">
+                                Delete
+                            </button>
+                        </mat-card-footer>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

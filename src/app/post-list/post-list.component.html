@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="post-list whole-screen container-fluid">
+    <div class="container">
+        <div class="row mt-2 d-flex">
+            <div class="search-container d-flex align-items-center justify-content-between">
+                
+                <!-- <h1>testing</h1> -->
+            </div>
+        </div>
+
+        <div class="row bordered my-2">
+            <div class="others-drifts col-8">
+                <h1>Find More Posts You’ll Love</h1>
+
+                <div class="blogs-container bordered">
+                    <div class="blog bordered" *ngFor="let blog of blogs">
+                        <mat-card class="blog-card p-2 bg-black">
+                            <mat-card-header class="blog-header-cont">
+                                <mat-card-title class="blog-title-cont" [innerHTML]="shortenTitle(blog.blog_title)"></mat-card-title>
+                            </mat-card-header>
+
+                            <mat-card-content class="allBlogBody-holder"
+                                [innerHTML]="getSummary(blog.blog_body)">
+                            </mat-card-content>
+                            
+                            <mat-card-content class="allOther-contents">
+
+                            </mat-card-content>
+
+                            <mat-card-footer class="footer-content">
+
+                                <small class="author">
+                                    {{blog.author_user_username}}
+                                    <span class="you" *ngIf="blog.author_user_id === currentUserId">(You)</span>
+                                    | {{blog.author_posts_created_at | date: 'medium'}} |
+                                    <span>{{ getViewCount(blog.blog_id) }} <span>{{getViewCount(blog.blog_id) == 0 || getViewCount(blog.blog_id) == 1 ? 'view' : 'views'}}</span> </span>
+                                </small>
+
+                                <div class="btn-cont">
+                                    <button class="readMore-btn" mat-button (click)="readMore(blog.blog_id)"><small>Read</small></button>
+                                </div>
+                            </mat-card-footer>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                
+                <div class="bordered actions-cont mt-4">
+                    <div class="search-container">
+                        <mat-form-field class="col-9 me-2 search-field">
+                            <input type="text" [(ngModel)]="search" (input)="onSearch()" matInput placeholder="Search">
+                            <i class="fas fa-search search-icon" matPrefix></i>  <!-- Use matPrefix to place icon inside -->
+                        </mat-form-field>
+                    </div>                    
+
+                    <a *ngIf="this.currentUserId" class="addPost-btn bg-black col-12" mat-button appearance="outlined" (click)="createPost()"> + POST</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

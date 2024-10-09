@@ -1,0 +1,12 @@
+.spacer {
+    width: 100%;
+    padding-top: 60px;
+}
+
+.spacer-footer {
+    width: 100%;
+}
+
+div.post-list.whole-screen.container-fluid{
+    max-height: auto;
+}

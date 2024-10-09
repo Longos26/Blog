@@ -1,0 +1,42 @@
+<!-- <p>post</p> -->
+
+<div class="whole-post whole-screen container-fluid">
+    <div class="container mb-4">
+        <div class="row mb-3">
+            <div *ngIf="blog" class="col-md-12">
+                <button mat-button (click)="goBack()">Back</button>
+                <mat-card class="blog-card bg-black p-2">
+                    <mat-card-header class="blogBody-holder">
+                        <mat-card-title class="mb-2">
+                            {{blog.blog_title}}
+                        </mat-card-title>
+                    </mat-card-header>
+                    
+                    <mat-card-content class="comment-cont" [innerHTML]="blog.blog_body">
+                    </mat-card-content>
+
+                    <mat-card-footer class="footer-content">
+                        <small class="author">
+                            {{blog.author_user_username}}
+                            <span class="you" *ngIf="blog.author_user_id === currentUserId">(You)</span>
+                            | {{blog.author_posts_created_at | date: 'medium'}}
+                        </small>
+
+                        <div class="btn-cont">
+                            <button *ngIf="blog.author_user_id === currentUserId" mat-button (click)="editBlog(blog.blog_id)"><small>Edit</small></button>
+                            <button class="delete-btn" *ngIf="blog.author_user_id === currentUserId" mat-button (click)="deleteBlog(blog.blog_id)"><small>Delete</small></button>
+                        </div>
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h6 class="mt-3">Comments</h6>
+                <app-comments-form (commentAdded)="onCommentAdded()"></app-comments-form>
+                <app-comments-display></app-comments-display>
+            </div>
+        </div>
+    </div>
+</div>

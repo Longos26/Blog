@@ -1,0 +1,60 @@
+.crBlog-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: fit-content; */
+    background-color: white;
+    /* background-color: rgb(58, 58, 58); */
+}
+
+.card {
+    background-color:white;
+}
+
+.card-container {
+    width: 100%;
+    /* height: fit-content; */
+}
+
+quill-editor {
+    width: 100%;
+    min-height: 72vh;
+    /* height: 72vh; */
+    background-color: rgb(29, 29, 29);
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    color: white;
+    /* margin-top: 10px;
+    margin-bottom: 10px;    */
+}
+
+/* for placeholder text color */
+:host ::ng-deep .ql-editor.ql-blank::before {
+    color: rgb(109, 109, 109);
+    /* Change this to your desired color */
+    font-style: italic;
+    /* Optional: Add any additional styles you want */
+    
+    /* opacity: 0.6; */
+    /* Optional: Adjust the opacity if needed */
+    content: attr(data-placeholder);
+    /* Ensure the placeholder text is displayed */
+}
+
+
+.crBlog-btn {
+    color: white;
+    border: 1px solid #ffffff;
+
+    margin-right: 1rem;
+}
+
+.crBlog-btn:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.qi-card-footer {
+    background-color: rgb(20, 16, 16);
+}
+

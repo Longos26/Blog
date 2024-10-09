@@ -1,0 +1,19 @@
+<div class="crBlog-container container-fluid p-0">
+    <div class="card-container m-0 p-0">
+        <form class="m-0" [formGroup]="blogForm" (ngSubmit)="onSave()">
+            <mat-form-field class="col-12">
+                <input matInput formControlName="blog_title" type="text" placeholder="Blog Title">
+            </mat-form-field>
+            <div class="card m-0 p-0">
+                <div class="card-body p-0 m-0">
+                    <quill-editor [modules]="quillConfig" formControlName="blog_body" [placeholder]="placeholderText"></quill-editor>
+                </div>
+    
+                <div class="qi-card-footer card-footer text-end">
+                    <button class="crBlog-btn" type="submit" mat-button>Save</button>
+                    <button class="back-btn" type="button" mat-button (click)="goBack()">Back</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

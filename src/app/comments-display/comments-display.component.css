@@ -1,0 +1,91 @@
+.comments-container {
+    padding: 0; /* Remove extra padding to fit Facebook-like structure */
+    margin: 0;
+}
+
+.comment-card {
+    border: none; /* No border, like Facebook */
+    box-shadow: none; /* Remove box shadow for a flat, simple design */
+    background-color: #f0f2f5; /* Light gray background for Facebook feel */
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Space between comments */
+    padding: 12px 16px; /* Padding inside the comment card */
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #65676b; /* Facebook-like muted text color */
+    margin-bottom: 6px;
+}
+
+.commentor {
+    font-weight: 600; /* Slightly bolder username */
+    color: #050505; /* Dark text for names */
+}
+
+.you {
+    color: #1877f2; /* Facebook blue for current user */
+    margin-left: 5px; /* Slight space between names and labels */
+}
+
+.author {
+    color: #f28b00; /* Orange-ish color for author */
+    margin-left: 5px;
+}
+
+.comment-body {
+    font-size: 15px; /* Slightly smaller, similar to Facebook */
+    color: #1c1e21; /* Darker text for readability */
+    line-height: 1.4; /* Adjusted line height for better text spacing */
+    margin-bottom: 8px; /* Space between body and action buttons */
+}
+
+.delC-btn {
+    color: #65676b; /* Muted gray for the delete button */
+    background-color: transparent; /* No background color */
+    border: none; /* No border, like Facebook buttons */
+    font-size: 13px;
+    cursor: pointer; /* Pointer for interactivity */
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.delC-btn:hover {
+    color: #d146de; /* Hover effect with a soft color change */
+}
+
+:host ::ng-deep p {
+    color: #1c1e21 !important; /* Text color to match Facebook's dark gray */
+}
+
+.comment-card:hover {
+    background-color: #e4e6eb; /* Slight background change on hover */
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Add space between action buttons */
+    margin-top: 5px; /* Separate action buttons from the comment body */
+    font-size: 13px;
+    color: #65676b;
+}
+
+.comment-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #65676b;
+    font-size: 13px;
+    padding: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.comment-actions button:hover {
+    color: #1877f2; /* Facebook blue hover for action buttons */
+}

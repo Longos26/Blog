@@ -1,0 +1,62 @@
+/* Importing the Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+.borderedd {
+    border: 2px solid rgb(150, 50, 200); /* Subtle purple border */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px; /* Smooth corners for a minimalist look */
+}
+
+.whole-screen {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.ql-editor.ql-blank::before {
+    color: rgb(150, 50, 200); /* Subtle purple for the placeholder text */
+    font-style: italic;
+    font-size: 16px;
+    opacity: 0.8;
+    content: attr(data-placeholder);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    background-color: #ffffff; /* White background for a minimalist vibe */
+    color: white; /* Soft black for text */
+}
+
+/* Additional global styles for aesthetic consistency */
+body {
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(150, 50, 200); /* Purple links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #333333; /* Soft black on hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333333; /* Consistent heading color */
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-weight: 300; /* Light font for a clean look */
+}
+
+.borderedd, .ql-editor.ql-blank::before, a {
+    transition: all 0.3s ease; /* Smooth transitions for interactive elements */
+}
